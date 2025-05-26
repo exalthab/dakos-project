@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop XYZ",
+    "price": 399999.99,
+    "image": "img/laptop.jpg",
+    "category": "laptops",
+    "description": "A high-performance laptop for professionals."
+  },
+  {
+    "id": 2,
+    "name": "Wireless Keyboard",
+    "price": 4999.99,
+    "image": "img/keyboard.jpg",
+    "category": "accessories",
+    "description": "A compact wireless keyboard with long battery life and ergonomic design."
+  },
+  {
+    "id": 3,
+    "name": "Wireless Mouse",
+    "price": 4999.99,
+    "image": "img/mouse.jpg",
+    "category": "accessories",
+    "description": "Smooth and precise wireless mouse with adjustable DPI and ergonomic grip."
+  }
+]

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Dakos products — empowering Africa’s digital future with laptops and accessories.">
+
+  <title>Products - Dakos</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- fav icon -->
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+  <div class="top-bar container d-flex justify-content-between align-items-center flex-wrap">
+    <div class="branding d-flex align-items-center gap-3">
+      <img src="img/dakos.svg" alt="Dakos Logo" class="logo" />
+      <div>
+        <h1 class="h4 mb-0">Dakos</h1>
+        <p class="motto mb-0">Empowering Africa’s Digital Future</p>
+      </div>
+    </div>
+    <a href="cart.html" class="shopping-cart" aria-label="Shopping Cart">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count" class="badge rounded-pill bg-danger">0</span>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">Dakos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home Page</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact us !</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+    <h2 class="mb-0">Our Products</h2>
+    <div class="filter-container">
+      <label for="category-filter" class="form-label mb-0">Filter:</label>
+      <select id="category-filter" class="form-select form-select-sm" aria-label="Filter by category">
+        <option disabled selected value="">-- Select Category --</option>
+        <option value="all">All Categories</option>
+        <option value="laptops">Laptops</option>
+        <option value="accessories">Accessories</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Product List -->
+  <section id="product-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" aria-label="Product List">
+    <!-- JavaScript will inject product cards here -->
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="text-center py-4 mt-5">
+  <small>&copy; 2025 Dakos. All rights reserved.</small>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/product.js" type="module"></script>
+<script src="js/cart.js" type="module"></script>
+<script src="js/filter.js" type="module"></script>
+<script src="js/utils.js" type="module"></script>
+<script src="js/script.js" type="module"></script>
+
+</body>
+</html>

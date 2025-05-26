@@ -1,0 +1,115 @@
+ body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+
+    header .top-bar {
+      background-color: #212529;
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      max-height: 50px;
+    }
+
+    .branding h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      color: #0d6efd;
+    }
+
+    .branding .motto {
+      font-size: 0.9rem;
+      color: #adb5bd;
+    }
+
+    .shopping-cart {
+      position: relative;
+      color: white;
+      text-decoration: none;
+    }
+
+    .shopping-cart i {
+      font-size: 1.5rem;
+    }
+
+    .shopping-cart span {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      font-weight: 500;
+      color: #495057;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #0d6efd;
+    }
+
+    main.container {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-weight: 600;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+
+    form .form-label {
+      font-weight: 500;
+    }
+
+    .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+    }
+
+    .btn-primary {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.6rem 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+    }
+
+    .contact-icon {
+      color: #0d6efd;
+      margin-right: 0.5rem;
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+    }
+
+    footer {
+      background-color: #e9ecef;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .branding {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      main.container {
+        padding: 1.5rem;
+      }
+    }

@@ -1,0 +1,144 @@
+body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #212529;
+    }
+
+    /* Header Styling */
+    header .top-bar {
+      background-color: #212529;
+      color: white;
+      padding: 0.75rem 1rem;
+    }
+
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      max-height: 50px;
+    }
+
+    .branding h1 {
+      font-size: 1.5rem;
+      color: #0d6efd;
+    }
+
+    .motto {
+      font-size: 0.875rem;
+      color: #adb5bd;
+    }
+
+    .shopping-cart {
+      position: relative;
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .shopping-cart span {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav.navbar {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #495057;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #0d6efd;
+    }
+
+    /* Cart Page Content */
+    main.container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+      margin-top: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    h4 {
+      font-weight: 600;
+      color: #198754;
+    }
+
+    #cart-items {
+      border-top: 1px solid #dee2e6;
+      border-bottom: 1px solid #dee2e6;
+      padding: 1.5rem 0;
+    }
+
+    #cart-items p {
+      font-style: italic;
+      color: #6c757d;
+    }
+
+    .btn {
+      padding: 0.6rem 1.5rem;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    .btn-success:hover {
+      background-color: #157347;
+    }
+    
+    /* Ensure Remove button is visible and styled properly */
+    .btn-outline-danger {
+      color: #dc3545;
+      border: 1px solid #dc3545;
+      background-color: transparent;
+    }
+
+    .btn-outline-danger:hover {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    /* Optional: Ensure smaller button works well in cart layout */
+    .btn-sm {
+      font-size: 0.875rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+    }
+
+
+    /* Responsive Handling */
+    @media (max-width: 768px) {
+      .branding {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      main.container {
+        padding: 1.5rem 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }

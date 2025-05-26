@@ -1,0 +1,52 @@
+ /* === Header Fixes === */
+    header .branding img.logo {
+      max-height: 50px;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    header .branding {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header .branding h1,
+    header .branding p {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    header a[aria-label="Shopping Cart"] {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Ajustement du main */
+    main#product-detail img {
+      max-height: 400px;
+      object-fit: contain;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+
+      header .branding {
+        flex-direction: column;
+      }
+    }
