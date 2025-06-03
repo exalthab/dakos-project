@@ -110,7 +110,7 @@ export function getCartTotal() {
 }
 
 /**
- * Get the formatted total price as XOF (FCFA) currency string
+ * Get the formatted total price as XOF currency string
  * @returns {string}
  */
 export function getFormattedCartTotal() {

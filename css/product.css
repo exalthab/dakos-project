@@ -32,7 +32,7 @@
       align-items: center;
     }
 
-    /* Ajustement du main */
+     /* Ajustement du main */
     main#product-detail img {
       max-height: 400px;
       object-fit: contain;
