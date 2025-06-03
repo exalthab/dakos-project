@@ -2,6 +2,8 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #f8f9fa;
   color: #343a40;
+  margin: 0;
+  padding: 0;
 }
 
 /* === Header Styling === */
@@ -16,6 +18,7 @@ header {
 
 .branding img.logo {
   max-height: 50px;
+  width: auto;
 }
 
 .branding h1 {
@@ -61,16 +64,27 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 select.form-select {
   width: auto;
   min-width: 180px;
+  margin-top: 0.5rem;
 }
 
-/* Product Card Placeholder */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
 #product-list .card {
+  flex: 1 1 calc(33.333% - 1.5rem); /* Default 3 columns */
   transition: transform 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
 }
 
 #product-list .card:hover {
@@ -82,4 +96,91 @@ select.form-select {
 footer {
   background-color: #e9ecef;
   font-size: 0.9rem;
+  padding: 1rem;
+  text-align: center;
 }
+
+/* Responsive Adjustments */
+
+/* Mobile-first adjustments */
+@media (max-width: 768px) {
+  /* Header */
+  header .container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .brand-heading {
+    font-size: 1.25rem; /* Adjust header size on smaller screens */
+  }
+
+  .shopping-cart {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Navbar */
+  .navbar-light .navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .navbar-light .nav-link {
+    font-size: 1rem;
+  }
+
+  /* Filter Section */
+  .filter-container {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  select.form-select {
+    min-width: 150px;
+    font-size: 1rem;
+  }
+
+  /* Product List */
+  #product-list {
+    gap: 1rem;
+  }
+
+  #product-list .card {
+    flex: 1 1 calc(50% - 1rem); /* Two columns on mobile */
+  }
+
+  /* Footer */
+  footer {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Extra Small Devices (max-width: 576px) */
+@media (max-width: 576px) {
+  header .branding {
+    text-align: center;
+  }
+
+  header .branding h1 {
+    font-size: 1.2rem; /* Smaller header for small screens */
+  }
+
+  .shopping-cart {
+    font-size: 1.1rem;
+  }
+
+  #product-list .card {
+    flex: 1 1 100%; /* Single column on very small screens */
+  }
+
+  select.form-select {
+    width: 100%; /* Full width for select dropdown on small screens */
+  }
+
+  footer {
+    font-size: 0.875rem;
+  }
+}
+

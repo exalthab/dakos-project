@@ -1,52 +1,195 @@
- /* === Header Fixes === */
-    header .branding img.logo {
-      max-height: 50px;
-      width: auto;
-      height: auto;
-      display: block;
-    }
+/* === Header Fixes. === */
+header .branding img.logo {
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  display: block;
+}
 
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 1rem;
-      padding: 0.5rem 1rem;
-    }
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
 
-    header .branding {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+header .branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-    header .branding h1,
-    header .branding p {
-      margin: 0;
-      line-height: 1.2;
-    }
+header .branding h1,
+header .branding p {
+  margin: 0;
+  line-height: 1.2;
+}
 
-    header a[aria-label="Shopping Cart"] {
-      display: flex;
-      align-items: center;
-    }
+header a[aria-label="Shopping Cart"] {
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
 
-     /* Ajustement du main */
-    main#product-detail img {
-      max-height: 400px;
-      object-fit: contain;
-    }
+/* Main Product Detail Adjustments */
+main#product-detail img {
+  max-height: 400px;
+  object-fit: contain;
+  width: 100%; /* Ensure image is responsive */
+}
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      header .container {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-      }
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
 
-      header .branding {
-        flex-direction: column;
-      }
-    }
+  header .branding {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .branding h1 {
+    font-size: 1.25rem; /* Adjust heading size for mobile */
+    margin-bottom: 0.5rem;
+  }
+
+  header .branding p {
+    font-size: 0.875rem; /* Slightly smaller text */
+    color: #6c757d;
+  }
+
+  header a[aria-label="Shopping Cart"] {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  /* Product Image */
+  main#product-detail img {
+    max-height: 250px; /* Reduce image size for smaller screens */
+    width: 100%; /* Make image responsive to screen width */
+    margin-bottom: 1rem;
+  }
+
+  /* Product Details (Text and Buttons) */
+  .product-description {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #198754;
+    margin-top: 0.5rem;
+  }
+
+  .btn {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%; /* Make button full-width */
+    margin-top: 1rem;
+  }
+
+  /* Optional: Adjust margins for product details */
+  .product-details {
+    padding: 1rem;
+  }
+
+  /* Adjust for smaller screens */
+  .product-description, .product-price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header .container {
+    padding: 1rem;
+  }
+
+  header .branding h1 {
+    font-size: 1.1rem; /* Make the product title smaller */
+  }
+
+  .product-description {
+    font-size: 0.875rem; /* Make text a bit smaller on very small screens */
+  }
+
+  .btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .product-price {
+    font-size: 1.125rem; /* Slightly smaller price text for small screens */
+  }
+
+  /* Product Image */
+  main#product-detail img {
+    max-height: 200px; /* Further reduce image height on very small screens */
+  }
+}
+
+/* product.css */
+
+/* Styling for the like button */
+#like-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: 2px solid #dc3545;
+  color: #dc3545;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#like-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Styling when the product is liked */
+#like-btn.liked {
+  background-color: #dc3545;
+  color: white;
+}
+
+#like-btn .fa-heart {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+#like-btn.liked .fa-heart {
+  color: white;
+  transform: scale(1.2);
+}
+
+#like-btn .fa-heart-filled {
+  color: #fff;
+}
+
+/* Add a little spacing to product title and description */
+#product-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#product-price {
+  font-size: 1.5rem;
+  color: green;
+}
+
+#product-desc {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #333;
+}

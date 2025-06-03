@@ -27,6 +27,7 @@ function renderCartItems() {
   const totalPriceElem = document.getElementById('total-price');
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+  // Si le panier est vide
   if (cart.length === 0) {
     cartItemsElem.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
     totalPriceElem.textContent = formatPrice(0);
@@ -37,6 +38,7 @@ function renderCartItems() {
   let total = 0;
   let html = '<div class="list-group">';
 
+  // Parcours des articles du panier
   cart.forEach((item, index) => {
     const quantity = item.quantity || 1;
     const itemTotal = item.price * quantity;
@@ -67,9 +69,9 @@ function renderCartItems() {
   document.querySelectorAll('.remove-btn').forEach(button => {
     button.addEventListener('click', () => {
       const idx = parseInt(button.getAttribute('data-index'), 10);
-      cart.splice(idx, 1);
+      cart.splice(idx, 1); // Suppression de l'élément du panier
       localStorage.setItem('cart', JSON.stringify(cart));
-      renderCartItems();
+      renderCartItems(); // Ré-render les articles du panier
     });
   });
 }
